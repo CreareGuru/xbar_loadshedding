@@ -58,6 +58,20 @@ axios.get(icsUrl)
         remainingTimeStr += `${minutes} minute${minutes > 1 ? 's' : ''} `;
       }
       console.log(`🔴 Loadshedding till: ${currentEvent.end.toLocaleTimeString()} ends in: ${remainingTimeStr} |size=11`);
+    
+      console.log('---');
+      console.log('Upcoming Outages | size=12 | color=white');
+      let count = 0;
+      for (const eventId in events) {
+          const event = events[eventId];
+          if (event.type === 'VEVENT' && event.start) {
+              if (event.start >= now && count < 5) {
+              console.log(`${event.summary} @ ${event.start.toLocaleString()} | size=12 | color=white`);
+              count++;
+              }
+          }
+      }
+
     } else {
       // Find the next event
       let nextEvent = null;
