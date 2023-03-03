@@ -5,7 +5,6 @@
 // <xbar.author>Wynand Nel</xbar.author>
 // <xbar.author.github>CreareGuru</xbar.author.github>
 // <xbar.desc>Simple plugin to display loadshedding schedules via .ics link</xbar.desc>
-// <xbar.image>https://hsto.org/webt/dd/yv/qn/ddyvqnycz-hytbdolo5ti48pii4.png</xbar.image>
 // <xbar.dependencies>nodejs</xbar.dependencies>
 
 
